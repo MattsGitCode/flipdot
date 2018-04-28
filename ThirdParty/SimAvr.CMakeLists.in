@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(ThirdParty-SimAvr NONE)
+
+include(ExternalProject)
+
+ExternalProject_Add(SimAvr
+        GIT_REPOSITORY https://github.com/MattsGitCode/simavr.git
+        BUILD_IN_SOURCE 1
+        CONFIGURE_COMMAND ""
+        BUILD_COMMAND CC=gcc make build-simavr RELEASE=1
+        TEST_BEFORE_INSTALL 1
+        TEST_COMMAND CC=gcc make build-tests RELEASE=1
+        INSTALL_COMMAND CC=gcc make install RELEASE=1 DESTDIR=<INSTALL_DIR>
+        UPDATE_COMMAND "")
+
+ExternalProject_Get_Property(SimAvr INSTALL_DIR)

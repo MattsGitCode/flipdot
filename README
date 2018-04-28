@@ -1,0 +1,8 @@
+Prerequisites
+=============
+
+- CMake
+- FreeGlut
+- PkgConfig
+- GCC
+- GCC-AVR
