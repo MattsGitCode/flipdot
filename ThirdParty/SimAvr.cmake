@@ -1,4 +1,3 @@
-find_package(GLUT REQUIRED)
 find_package(PkgConfig REQUIRED)
 find_package(LibElf REQUIRED)
 

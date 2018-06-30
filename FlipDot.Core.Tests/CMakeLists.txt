@@ -16,5 +16,5 @@ target_link_libraries(FlipDot.Core.Tests
         GoogleTest)
 
 
-add_test(NAME MyTests
+add_test(NAME FlipDot.Core.Tests
         COMMAND FlipDot.Core.Tests)
